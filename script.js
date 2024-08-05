@@ -1,41 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var swiper1 = new Swiper('.swiper-herobanner', {
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
-        pagination: {
-            el: '.swiper-pagination1',
-            clickable: true,
-        },
-        loop: true, // Enable loop mode
-        autoplay: {
-        delay: 7000, // Delay between transitions (in ms)
-        disableOnInteraction: false, // Stop autoplay on user interaction
-        },
-        on: {
-        init: function() {
-            var firstSlide = this.slides[0];
-            firstSlide.classList.add('zoomed');
-        },
-        slideChangeTransitionStart: function() {
-            var currentSlide = this.slides[this.activeIndex];
-            var zoomedSlide = this.slides[this.previousIndex];
-            
-            if (zoomedSlide) {
-            zoomedSlide.classList.remove('zoomed');
-            }
-            
-            currentSlide.classList.add('zoomed');
-        }
-        }
-    }); 
     const swiper2 = new Swiper('#swiper2', {
         // Optional parameters
         direction: 'horizontal',
         grid: {
           rows: 2,
-          fill: "row"
         },
         spaceBetween: 30,
         loop: false,

@@ -176,9 +176,6 @@ main .title {
     color: #1b57a1;
     font-family: 'Gill Sans Std Bold';
 }
-main h3.title {
-    font-size: 1.3rem;
-}
 main .subtitle {
     font-size: 1.5rem;
     font-size: 1.5rem;
@@ -197,6 +194,7 @@ main .container a.btn {
     padding: 10px 20px 8px;
     border: 2px solid #10406f;
     color: #3169af;
+    background: #f7f7f7;
     font-weight: 600;
 }
 .container a:hover {
@@ -204,11 +202,6 @@ main .container a.btn {
 }
 
 /*hero banner*/
-.herobanner .shape {
-    bottom: -2px;
-    z-index: 100;
-    position: absolute;
-}
 .herobanner {
     display: flex;
     justify-content: center;
@@ -240,12 +233,17 @@ main .container a.btn {
     font-weight: 400;
     background: #3169af;
 }
-
-/* swiper */
 .swiper-herobanner {
     height: 500px;
     overflow: hidden;    
 }
+
+#youtubeVideo {
+    width: 560px; 
+    height: 315px;
+}
+
+/* swiper */
 .swiper-pagination-bullet {
     background: #fff !important;
 }
@@ -275,21 +273,12 @@ main .container a.btn {
     justify-content: center;
     bottom: var(--swiper-pagination-bottom, -30px) !important;
 }
-.swiper-slide {
-    height: auto !important;
-    min-height: 180px;
-}
 .swiper-slide img {
     width: 100%;
     transition: transform 10s;
 }
-.swiper-herobanner .swiper-slide.zoomed img {
+.swiper-slide.zoomed img {
     transform: scale(1.09);
-    width: auto;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    margin-right: 0;
 }
 .swiper-button-next {
     color: #10406f !important;
@@ -299,21 +288,15 @@ main .container a.btn {
     color: #10406f !important;
     left: var(--swiper-navigation-sides-offset, -50px) !important;
 }
-/* cards */
-.card-container.b {
-    height: inherit !important;
-}
-.card-container {
-    height: 100%;
-    display: flex;
-}
 /* componentes */
+.componentes .shape {
+    top: -7vw;
+    position: absolute;
+    z-index: -1000;
+}
 .componentes .card {
     color: #333333;
     border: 0;
-}
-.componentes .card .title {
-    font-size: 16px;
 }
 /* aplicaciones */
 .aplicaciones {
@@ -337,7 +320,9 @@ main .container a.btn {
     color: #fff;
     border: 0;
     background-color: #33669e;
-    background-image: linear-gradient(to bottom, #28888e, #3367a7);
+    background-image: url('../images/cards-background2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 10px;
     align-items: center;
     padding: 20px 15px;
@@ -374,13 +359,15 @@ main .container a.btn {
     position: absolute;
     z-index: -1000;
 }
+.normatividad #swiper2 {
+    height: 430px;
+}
 .normatividad .swiper-slide {
     display: flex;
     align-items: center;
 }
 .normatividad .card.d-flex {
     height: 100%;
-    min-height: 197px !important;
     flex-direction: inherit;
     color: #fff;
     border: 0;
@@ -414,6 +401,10 @@ main .container a.btn {
 }
 .normatividad .card .card-title {
     font-size: 1.2rem;
+}
+/* noticias */
+.noticias #swiper3 {
+    height: 300px;
 }
 
 /* objetivos */
@@ -580,30 +571,4 @@ main .panel-consultas .title {
 }
 .step.active {
     display: block;
-}
-
-@media (max-width: 576px) {
-    .swiper-herobanner {
-        height: 340px;
-    }
-    .herobanner::after {
-        background: #23292ed9;
-    }
-    main .section {
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-    main .title {
-        font-size: 1.3rem;
-    }
-    .row.switch {
-        flex-direction: column-reverse;
-    }
-    .aplicaciones .card.d-flex {
-        min-height: 189px;
-    }
-    .swiper-button-next, .swiper-rtl .swiper-button-prev {
-        display: none !important;
-    }
 }
